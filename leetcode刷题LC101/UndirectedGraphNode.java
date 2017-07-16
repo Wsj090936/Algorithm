@@ -1,10 +1,11 @@
 package algorithms;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UndirectedGraphNode {
     int label;
-    ArrayList<UndirectedGraphNode> neighbors;
+    List<UndirectedGraphNode> neighbors;
     UndirectedGraphNode(int x) {
         label = x;
         neighbors = new ArrayList<UndirectedGraphNode>();
