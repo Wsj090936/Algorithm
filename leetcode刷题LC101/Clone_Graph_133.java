@@ -1,8 +1,8 @@
 package algorithms;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Queue;
 
@@ -15,7 +15,7 @@ public class Clone_Graph_133 {
 		queue.add(node);
 		while(!queue.isEmpty()){
 			UndirectedGraphNode top = queue.poll();
-			ArrayList<UndirectedGraphNode> neighbors = top.neighbors;
+			List<UndirectedGraphNode> neighbors = top.neighbors;
 			
 			for(UndirectedGraphNode each : neighbors){//循环复制节点
 				if(!map.containsKey(each)){
