@@ -15,7 +15,7 @@ public class S_04_MerageSort {
 		if(l == r){
 			return;
 		}
-		int mid = (r-1)/2;
+		int mid = l + (r-l)/2;
 		merageSort1(arr,l,mid);
 		merageSort1(arr,mid+1,r);
 		merage(arr,l,mid,r);
@@ -31,7 +31,7 @@ public class S_04_MerageSort {
 		while(ptr <= m){//如果一方还没遍历玩
 			help[i++] = arr[ptr++];
 		}
-		while(cur <= m){
+		while(cur <= r){
 			help[i++] = arr[cur++];
 		}
 		for (i = 0;  i < help.length; i++) {

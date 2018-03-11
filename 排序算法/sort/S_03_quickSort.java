@@ -13,9 +13,9 @@ public class S_03_quickSort {
 		if(l<r){
 			swap(arr,l+(int)(Math.random()*(r-l+1)),r);//每次随机取一个位置上的数作为基准 l + (int) (Math.random() * (r - l + 1))
 			int[] p = partition(arr,l,r);
-			quickSort1(arr,l,p[0]);
-			quickSort1(arr,p[1],r);
-		}
+			quickSort1(arr,l,p[0] - 1);
+			quickSort1(arr,p[1]+1,r);
+		} 
 	}
 	
 	public static int[] partition(int[] arr,int l,int r){
@@ -31,7 +31,7 @@ public class S_03_quickSort {
 			}
 		}
 		swap(arr,more,r);//将基准放到中间位置
-		return new int[]{less,more};//可能less会不变
+		return new int[]{less + 1,more};//等于区域的下标
 	}
 
 	private static void swap(int[] arr,int j,int k){
