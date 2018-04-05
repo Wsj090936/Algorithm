@@ -21,10 +21,10 @@ public class PrintEdge {
 		//首先得先知道该树的高度
 		int height = getHeight(head,0);
 		Node[][] edgeMap = new Node[height][2];//（0，0）记录第一层的左边界，(0,1)记录有边界，以此类推
+		setEdgeMap(edgeMap,head,0);
 		for(int i = 0;i < edgeMap.length;i++){
 			System.out.println(edgeMap[i][0].value+" ");
 		}
-		setEdgeMap(edgeMap,head,0);
 		//然后打印既不是左边界，又不是有边界的叶子结点
 		printNotEdgeNode(head,0,edgeMap);
 		//打印右边界节点但它不是左边界
