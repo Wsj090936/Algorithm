@@ -54,7 +54,6 @@ public class NIO_test {
 				read = socketChannel.read(buf);
 			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 		}
 	}
 }

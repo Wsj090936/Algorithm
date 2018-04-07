@@ -1,4 +1,9 @@
 package array;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
 /**
  * 将一个二维数组反转90度
  * p333
@@ -25,6 +30,30 @@ public class Aa_333 {
 			arr[rx-i][ly] = arr[rx][ry-i];
 			arr[rx][ry-i] = arr[lx+i][ry];
 			arr[lx+i][ly] = temp;
+		}
+	}
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		ArrayList<Integer> list = new ArrayList<>();
+		while(scanner.hasNextInt()){
+			list.add(scanner.nextInt());
+		}
+		System.out.println(111);
+		int size = list.size();
+		int row = (int) Math.sqrt(size);
+		int col = (int) Math.sqrt(size);
+		int[][] arr = new int[row][col];
+		Iterator<Integer> iterator = list.iterator();
+		for(int i = 0;i < row;i++){
+			for(int j = 0;j < col;j++){
+				arr[i][j] = iterator.next();
+			}
+		}
+		reverseArray(arr);
+		for(int i = 0;i < row;i++){
+			for(int j = 0;j < col;j++){
+				System.out.println(arr[i][j]);
+			}
 		}
 	}
 }
