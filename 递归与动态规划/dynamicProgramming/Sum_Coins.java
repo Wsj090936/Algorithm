@@ -61,7 +61,7 @@ public class Sum_Coins {
 		}
 //		int num = 0;
 		for(int i = 1;i < arr.length;i++){
-			for(int j = 0;j <= aim;j++){//j就是想要找的钱数
+			for(int j = 1;j <= aim;j++){//j就是想要找的钱数
 /*				num = 0;
 				for(int k = 0;j-arr[i]*k >= 0;k++){					
 					num += dp[i - 1][j - arr[i]*k];//记录总方法数		
