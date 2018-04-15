@@ -19,7 +19,7 @@ public class Money {
 	public static boolean money1(int[] arr,int aim){//由递归推来的
 		boolean[][]dp = new boolean[arr.length + 1][aim + 1];
 		for(int i = 0;i < arr.length;i++){
-			dp[i][aim] = true;
+			dp[i][aim] = true;//当sum==aim时，才为true
 		}
 		for(int i = arr.length - 1;i >= 0;i--){//行
 			for(int j = aim - 1; j > 0;j--){//列
